@@ -1,1 +1,251 @@
-<html>Under construction</html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="./mystyle.css" />
+	<title>Jens Behley's homepage</title>
+	<script type="text/javascript">
+	function toggleAbstract(element_id)
+	{
+		if(document.getElementById(element_id).style.display == "block")
+			document.getElementById(element_id).style.display="none";
+		else
+			document.getElementById(element_id).style.display="block";
+	}
+	</script>
+	</head>
+	<body>
+		<div id="contact">
+			<h1>contact</h1>
+			<div id="photo"><img src="images/jens_web.jpg" alt="Jens Behley" width="100"></div>
+
+			<div id="name"><b>Dr. Jens Behley</b></div>
+			<div id="position">Currently Fulltime Dad <br /><br /> email: <img id="email" src="images/email_adress.jpg"></div>
+			<div id="email"><br /><br /><br /></div>
+			
+		</div>
+
+		<div id="publications">
+			<h1>publications</h1>
+			<div id="publication">
+				<span id="author">J. Behley, V. Steinhage, A.B. Cremers. </span>
+				<span id="title">Efficient Radius Neighbor Search in Three-dimensional Point Clouds</span>,
+				<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+				<!--span id="pages">pp. 4195&ndash;4200,</span-->
+				<span id="year">2015.</span>
+				<div class="abstract" id="behley2015icra">
+				<b><i>Abstract</i> &mdash; </b>Finding all neighbors of a point inside a given radius is an integral part in many approaches using three-dimensional laser range data.
+				We present novel insights to significantly improve the runtime performance of radius neighbor search using octrees. Our contributions are as follows: 
+				(1) We propose an index-based organization of the point cloud such that we can efficiently store start and end indexes of points inside every octant and 
+				(2) exploiting this representation, we can use pruning of irrelevant subtrees in the traversal to facilitate highly efficient radius neighbor search.
+        We show significant runtime improvements of our proposed octree representation over state-of-the-art neighbor search implementations on three different urban datasets.
+				</div>
+				<div id="links"><a href="javascript:toggleAbstract('behley2015icra')">abstract</a> <a href="papers/behley2015icra.pdf">draft</a> <a href="octree/index.html">code</a> <a href="data/index.html">data</a></div>
+			</div>
+			<div id="publication">
+				<span id="author">J. Behley. </span>
+				<span id="title">Three-dimensional Laser-based Classification in Outdoor Environments</span>,
+				<span id="proceeding">Dissertation, Rheinische Friedrich-Wilhelms-Universit&auml;t Bonn,</span>
+				<!--span id="pages">pp. 4195&ndash;4200,</span-->
+				<span id="year">2014.</span>
+				<div class="abstract" id="behley2014phd">
+				<b><i>Abstract</i> &mdash; </b>Robotics research strives for deploying autonomous systems in populated environments, such as inner city traffic. 
+				Autonomous cars need a reliable collision avoidance, but also an object recognition to distinguish different classes of traffic participants. 
+				For both tasks, fast three-dimensional laser range sensors generating multiple accurate laser range scans per second, each consisting of a vast number of laser points, are often employed.
+				In this thesis, we investigate and develop classification algorithms that allow us to automatically assign semantic labels to laser scans.
+				We mainly face two challenges: (1) we have to ensure consistent and correct classification results and (2) we must efficiently process a vast number of laser points per scan. In consideration of these challenges, we cover both stages of classification -- the feature extraction from laser range scans and the classification model that maps from the features to semantic labels.
+				<br/>
+				As for the feature extraction, we contribute by thoroughly evaluating important state-of-the-art histogram descriptors.
+				We investigate critical parameters of the descriptors and experimentally show for the first time that the classification performance can be significantly improved using a large support radius and a global reference frame. 
+				<br/>
+				As for learning the classification model, we contribute with new algorithms that improve the classification efficiency and accuracy.
+				Our first approach aims at deriving a consistent point-wise interpretation of the whole laser range scan.
+				By combining efficient similarity-preserving hashing and multiple linear classifiers, we considerably improve the consistency of label assignments, requiring only minimal computational overhead compared to a single linear classifier. 
+				<br/>
+				In the last part of the thesis, we aim at classifying objects represented by segments.
+				We propose a novel hierarchical segmentation approach comprising multiple stages and a novel mixture classification model of multiple bag-of-words vocabularies.
+				We demonstrate superior performance of both approaches compared to their single component counterparts using challenging real world datasets.
+				</div>
+				<div id="links"><a href="javascript:toggleAbstract('behley2014phd')">abstract</a> <a href="http://hss.ulb.uni-bonn.de/2014/3504/3504.htm">ULB Bonn</a> <a href="http://hss.ulb.uni-bonn.de/2014/3504/3504.pdf">pdf</a></div>
+			</div>
+			<div id="publication">
+				<span id="author">J. Behley, V. Steinhage, A.B. Cremers. </span>
+				<span id="title">Laser-based Segment Classification Using a Mixture of Bag-of-Words</span>,
+				<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
+				<span id="pages">pp. 4195&ndash;4200,</span>
+				<span id="year">2013.</span>
+				<div class="abstract" id="behley2013iros">
+				<b><i>Abstract</i> &mdash; </b>In this paper, we propose a segment-based object detection approach using laser range data.
+				Our detection approach is built up of three stages:
+				First, a hierarchical segmentation approach generates a hierarchy of coarse-to-fine segments to reduce the impact of over- and under-segmentation in later stages.
+				Next, we employ a learned mixture model to classify all segments.
+				The model combines multiple softmax regression classifiers learned on specific bag-of-word representations using different parameterizations of a descriptor.
+				In the final stage, we filter irrelevant and duplicate detections using a	greedy method in consideration of the segment hierarchy.
+				We experimentally evaluate our approach on recently published real-world datasets to detect pedestrians, cars, and cyclists.
+				</div>
+				<div id="links"><a href="javascript:toggleAbstract('behley2013iros')">abstract</a> <a href="papers/behley2013iros.pdf">draft</a><a href="data/index.html">data</a></div>
+			</div>
+			<div id="publication">
+				<span id="author">V. Steinhage, J. Behley, S. Meisel, A.B. Cremers. </span>
+				<span id="title">Reconstruction by components for automated updating of 3D city models</span>,
+				<span id="proceeding">Applied Geomatics,</span>
+				<span id="pages"></span><!--pp. 4391&ndash;4398</span>,-->
+				<span id="year">Springer, 2013.</span>
+				<div class="abstract" id="steinhage2013ag">
+				<b><i>Abstract</i> &mdash; </b>3D city models are of interest for various reasons like urban planning, environmental simulations of urban climate and noise pollution, disaster simulations, virtual tourism, virtual-heritage conservation, etc.
+				To create and update large-scale 3D city models efficiently, automated approaches to 3D reconstruction are in great demand.
+				Aside from efficiency, reliability and flexibility are of crucial importance.
+				The derived reconstruction results should be reliable in that they correspond to the observed buildings in both their geometry and their structural topology.
+				Flexibility should ensure the derivation of 3D reconstructions for the most common urban building structures without being limited in descriptive power to only some specific building types.
+				To ensure efficiency, reliability, and flexibility of automated 3D building reconstruction, we propose an approach that combines two paradigms.
+				First, we employ the fusion of information derived from different sensors and map data from a geographic information system.
+				Second, we employ a semantic and component-based approach to model and reconstruct complex buildings.
+				The derived geometrical and semantic building description is utilized within a spatial information system to support spatial and semantic queries for the maintenance and updating of the derived 3D city models.
+				</div>
+				<div id="links"><a href="javascript:toggleAbstract('steinhage2013ag')">abstract</a> <a href="http://link.springer.com/article/10.1007/s12518-013-0117-5">link</a> </div>
+			</div>
+			<div id="publication">
+				<span id="author">J. Behley, V. Steinhage, A.B. Cremers. </span>
+				<span id="title">Performance of Histogram Descriptors for the Classification of 3D Laser Range Data in Urban Environments</span>,
+				<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+				<span id="pages">pp. 4391&ndash;4398</span>,
+				<span id="year">2012.</span>
+				<div class="abstract" id="behley2012icra">
+				<b><i>Abstract</i> &mdash; </b> The selection of suitable features and their parameters for the classification of three-dimensional laser range data is a crucial issue for high-quality results. 
+				In this paper we compare the performance of different histogram descriptors and their parameters on three urban datasets recorded with various sensors &mdash; sweeping SICK lasers, tilting SICK lasers and a Velodyne 3D laser range scanner.
+				These descriptors are 1D, 2D, and 3D histograms capturing the distribution of normals or points around a query point.
+				We also propose a novel histogram descriptor, which relies on the spectral values in different scales.
+				We argue that choosing a larger support radius and a z-axis based global reference frame/axis can boost the performance of all kinds of investigated classification models significantly.
+				The 3D histograms relying on the point distribution, normal orientations, or spectral values, turned out to be the best choice for the classification in urban environments.
+				</div>
+				<div class="abstract" id="behley2012-errata">
+				<i>Errata</i> &mdash; In section 2 there were two errors in the histogram index derivation.
+				(1) The spin image index j must be calculated as floor(1/rho 0.5 (delta + beta)).
+				(2) The distribution histogram must be calculated as floor(b/2 (q'/delta + 1)).
+				In the linked version (draft), these errors are corrected.
+				</div>
+				<div id="links"><a href="javascript:toggleAbstract('behley2012icra')">abstract</a> <a href="papers/behley2012icra.pdf">draft</a> <a href="javascript:toggleAbstract('behley2012-errata')">errata</a><a href="data/index.html">data</a></div>
+			</div>
+			<div id="publication">
+				<span id="author">F. Sch&ouml;ler, J. Behley, V. Steinhage, D. Schulz, A.B. Cremers. </span>
+				<span id="title">Person Tracking in Three-Dimensional Laser Range Data with Explicit Occlusion Adaption</span>,
+				<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+				<span id="pages">pp. 1297&ndash;1303</span>,
+				<span id="year">2011.</span>
+				<div class="abstract" id="schoeler2011icra">
+				<b><i>Abstract</i> &mdash; </b> This paper presents an approach to exploit the richer information of sensor data provided by 3d laser rangefinders for the purpose of person tracking.
+				Introduced is a method to adapt the observation model of a particle filter, to identify partial and full occlusions of a person, to determine the amount of occlusion behind an obstacle, and the occluding obstacle itself.
+				This is done by tracing rays from positions near the person to the sensor and determining whether the ray hits an obstacle.
+				The laser range data is represented using a voxel grid, which facilitates efficient retrieval and data reduction.
+				As our experiments show, our proposed tracking approach is able to reliably keep track of a person in real-time, even when only partially visible, when moving in uneven terrain, or when the person passes closely another person of different size.
+				</div> 
+				<div id="links"><a href="javascript:toggleAbstract('schoeler2011icra')">abstract</a> <a href="papers/schoeler2011icra.pdf">draft</a></div>
+			</div>
+			<div id="publication">
+				<span id="author">J. Behley, K. Kersting, D. Schulz, V. Steinhage, A.B. Cremers. </span>
+				<span id="title">Learning to Hash Logistic Regression for Fast 3D Scan Point Classification</span>,
+				<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
+				<span id="pages">pp. 5960&ndash;5965</span>,
+				<span id="year">2010.</span>
+				<div class="abstract" id="behley2010iros">
+				<b><i>Abstract</i> &mdash; </b> Segmenting range data into semantic categories has become a more and more active field of research in robotics.
+				In this paper, we advocate to view this task as a problem of fast, large-scale retrieval.
+			  Intuitively, given a dataset of millions of labeled scan points and their neighborhoods, we simply search for similar points in the datasets and use the labels of the retrieved ones to predict the labels of a novel point using some local prediction model such as majority vote or logistic regression.
+				However, actually carrying this out requires highly efficient ways of (1) storing millions of scan points in memory and (2) quickly finding similar scan points to a target scan point.
+				In this paper, we propose to address both issues by employing Weiss et al.'s recent spectral hashing.
+				It represents each item in a database by a compact binary code that is constructed so that similar items will have similar binary code words.
+				In turn, similar neighbors have codes within a small Hamming distance of the code for the query.
+			  Then, we learn a logistic regression model locally over all points with the same binary code word.
+				Our experiments on real world 3D scans show that the resulting approach, called spectrally hashed logistic regression, can be ultra fast at prediction time and outperforms state-of-the art approaches such as logistic regression and nearest neighbor.
+				</div> 
+				<div id="links"><a href="javascript:toggleAbstract('behley2010iros')">abstract</a> <a href="papers/behley2010iros.pdf">draft</a></div>
+			</div>
+			<div id="publication">
+				<span id="author">V. Steinhage, J. Behley, S. Meisel, A. B. Cremers. </span>
+				<span id="title">Automated Updating and Maintenance of 3D City Models</span>,
+				<span id="proceeding">ISPRS-Workshop on Core Spatial Databases - Updating, Maintenance and Services,</span>
+				<span id="pages"></span>
+				<span id="year">2010.</span>
+				<div class="abstract" id="steinhage2010isprs-ws">
+				<b><i>Abstract</i> &mdash; </b> The automation of 3D building reconstruction is an ongoing topic of worldwide research.
+				Currently, cities all over the world are heavily engaged to create 3D city models for various reasons like town planning, urban climate and noise simulations, virtual tourism etc.	
+				Generally, companies are entrusted to generate such 3D city models.
+				The current approaches of those companies are labour intensive and therefore cost intensive, since the reconstruction of each single building is based mainly on manual processing within a computer supported editing framework.
+				The same holds for internet providers of 3D city models which offer tools for the interactive construction of 3D models (e.g. the SketchUp tool of Google Earth).
+				In cooperation with the land registry and surveying office of the city of Bonn we developed an automated approach to 3D building reconstruction as well as a spatial information system for the maintenance of 3D city models.
+				This contribution focuses on our approach on 3D building reconstruction which employs a model-based data fusion from aerial images, airborne laser scanning and GIS.
+				Furthermore, we describe our spatial information system to maintain the 3D city models.
+				The spatial information system is based on open source RDBMS and offers SQL-based spatial query functionality.
+				</div> 
+				<div id="links"><a href="javascript:toggleAbstract('steinhage2010isprs-ws')">abstract</a> <a href="papers/steinhage2010isprs-ws.pdf">draft</a></div>
+			</div>
+			<div id="publication">
+				<span id="author">J. Behley, V. Steinhage. </span>
+				<span id="title">Generation of 3D City Models Using Domain-Specific Information Fusion</span>,
+				<span id="proceeding">Proc. of the International Conference on Computer Vision Systems (ICVS),</span>
+				<span id="pages">pp. 164&ndash;173</span>,
+				<span id="year">2009.</span>
+				<div class="abstract" id="behley2009icvs">
+				<b><i>Abstract</i> &mdash; </b> In this contribution we present a building reconstruction strategy using spatial models of building parts and information fusion of aerial image, digital surface model and ground plans.
+				The fusion of sensor data aims to derive reliably local building features and is therefore controlled in a domain specific way: 
+				ground plans indicate the approximate location of outer roof corners and the intersection of planes from the digital surface model yields the inner roof corners.
+				Parameterized building parts are selected using these corners and afterwards combined to form complete three-dimensional building models.
+				We focus here on the domain specific information fusion and present results on a sub-urban dataset.
+				</div> 
+				<div id="links"><a href="javascript:toggleAbstract('behley2009icvs')">abstract</a> <a href="papers/behley2009icvs.pdf">draft</a></div>
+			</div>
+			<div id="publication">
+				<span id="author">V. Steinhage, J. Behley. </span>
+				<span id="title">Model-Driven Generation of 3D City Models using Information Fusion on Aerial Imagery, Laser Altimeter and Map Data</span>,
+				<span id="proceeding">GFaI-Workshop 3D-NordOst,</span>
+				<span id="pages"></span>
+				<span id="year">2008.</span>
+			</div>
+		</div>
+		
+		<div id="teaching">
+			<h1>teaching</h1>
+			<div id="course">
+				<span id="term">Summer Term 15: </span>
+				<span id="name">"Knowledge-based Image Understanding" (Master) together with PD Dr. Volker Steinhage and Dominik A. Klein</span>
+			</div>
+			<div id="course">
+				<span id="term">Summer Term 14: </span>
+				<span id="name">"Knowledge-based Image Understanding" (Master) together with PD Dr. Volker Steinhage</span>
+				<span id="name">Projectgroup "Intelligente Sehsystem" (Bachelor)</span>
+			</div>
+			<div id="course">
+				<span id="term">Summer Term 13: </span>
+				<span id="name">Projectgroup "Intelligente Sehsystem" (Bachelor)</span>
+			</div>
+			<div id="course">
+				<span id="term">Summer Term 12: </span>
+				<span id="name">Exercises "Autonomous Mobile Systems" (Master)</span>
+			</div>
+			<div id="course">
+				<span id="term">Winter Term 11/12: </span>
+				<span id="name">Projectgroup "Intelligente Sehsystem" (Bachelor)</span>
+			</div>
+			<div id="course">
+				<span id="term">Summer Term 11: </span>
+				<span id="name">Exercises "Autonomous Mobile Systems" (Master)</span>
+			</div>
+			<div id="course">
+				<span id="term">Winter Term 10/11: </span>
+				<span id="name">Projectgroup "Intelligente Sehsysteme (Bachelor)</span>
+			</div>
+			<div id="course">
+				<span id="term">Summer Term 10</span>
+				<span id="name">Exercises "Autonomous Mobile Systems" (Master)</span>
+			</div>
+			<div id="course">
+				<span id="term">Winter Term 09/10: </span>
+				<span id="name">Projectgroup "Intelligente Sehsysteme" (Bachelor)</span>
+			</div>
+			<!--<h1>(Co)-Supervised thesises-->
+		</div>
+
+		<footer>
+		</footer>		
+	</body>
+</html>

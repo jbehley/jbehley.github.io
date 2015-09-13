@@ -1,0 +1,166 @@
+article,aside,figure,footer,header,hgroup,nav,section{display:block}
+
+
+
+body
+{
+	margin: 1em auto;
+	width: 50em;
+}
+
+div.border-element {
+
+     display: block;
+     height: 230px;
+     padding: 10px;
+		 margin: 5px;
+}
+
+div h1
+{
+    border: 1px dotted blue;
+		-webkit-border-top-left-radius: 10px;
+		-webkit-border-top-right-radius: 10px;
+	  -moz-border-radius-topleft: 10px;
+	  -moz-border-radius-topright: 10px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		padding:4px;
+		padding-top:6px;
+		padding-bottom:6px;
+		padding-left:10px;
+		border:1px solid;
+		font-size:14pt;
+		background-color:#92B901;
+		color:white;
+}
+
+div#name, #position, #address {
+     padding: 5px;
+		 position: relative;
+		 left:10px;
+}
+
+div#announcement {
+  padding: 5px;
+  border: 10px solid red;
+  margin:10px;
+  text-align: center;
+}
+
+div#office,#phone,#email
+{
+		 padding: 5px;
+		 position: relative;
+		 left:115px;
+}
+
+div#links
+{
+	padding:5px;
+}
+
+div#links a
+{
+	margin:5px;
+}
+
+div.abstract{
+	display:none;
+	font-size:9pt;
+	margin:5px;
+	padding:8px;
+	background:#E0AF66;
+	text-align: justify;
+	border: 1pt dashed gray;
+}
+
+img#email {
+     height: 12pt;
+     left: -2px;
+     position: relative;
+     top: 7px;
+}
+
+div#photo {
+		 padding:5px;
+		 float: left;
+}
+
+div#publication
+{
+	padding: 10px 20px 10px 20px;
+}
+
+span#title
+{
+	font-weight: bold;
+}
+span#proceeding
+{
+	font-style:italic;
+}
+
+div#course
+{
+	padding: 3px 20px 3px 20px;
+}
+
+div#introduction{
+	text-align: justify;
+	margin:5px;
+	padding:8px;
+}
+
+div#labels
+{
+	font-size:9pt;
+	margin:5px;
+	padding:8px;
+	background:#E0AF66;
+	text-align: justify;
+	border: 1pt dashed gray;
+}
+
+div#references
+{
+	font-size:9pt;
+	margin:5px;
+	padding:8px;
+	background:#E0AF66;
+	text-align: justify;
+	border: 1pt dashed gray;
+}
+
+div#screenshots
+{
+	text-align:center;
+}
+
+img.dataset-screenshot
+{
+	width:30%;
+	border: 1pt dashed gray;
+	padding:5px;
+}
+
+div#reference
+{
+	margin:5px;
+}
+
+div#classes
+{
+	margin:5px;
+}
+
+div#links a:hover#scans,a:link#scans,a:hover#labels,a:link#labels
+{
+	padding:5px;
+	font-size:11pt;
+	font-weight:bold;
+	text-decoration:none;
+	color:#3B7CBE;
+}
+
+/*http://colorschemedesigner.com/#2b52PvPogw0w0*/

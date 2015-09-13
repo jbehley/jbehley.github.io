@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../mystyle.css" />
+	<title>Datasets -- Classification and Tracking</title>
+	</head>
+	<body>
+	
+	<div id="introduction">
+	Datasets used in some recent publications.<br/>
+
+	If we used publically available datasets by other researchers, we redirect to their page.
+	We also report the scans used in the experiments in the corresponding paper.
+	If you're using data from these authors or annotations, you may cite their paper.
+	<br />
+	<br />
+	<table style="padding:5px; text-align: justify;"><tr><td style="align:top"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a></td><td>
+  Our datasets and labels are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License</a>. The datasets are distributed WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</td></tr></table>
+	</div>
+	<div id="dataset">
+			<h1>KITTI Validation Dataset</h1>
+			<!--div id = "screenshots">
+		  <a href="freiburg1.jpg"><img class = "dataset-screenshot" src="freiburg1_small.jpg"></a>
+			<a href="freiburg2.jpg"><img class = "dataset-screenshot" src="freiburg2_small.jpg"></a>
+			<a href="freiburg3.jpg"><img class = "dataset-screenshot" src="freiburg3_small.jpg"></a>
+			</div-->
+			<!--div id = "labels">
+			  <b>Labels</b>
+				<div id = "classes">Ground(Street, Sidewalks), Building(Facade, Door, Window), Vegetation(Foliage, Bush, Lawn), Pole(Utility Poles, Trunks)</div>
+			</div-->
+			<div id = "labels">
+				<b>Validation set</b>
+				In our IROS paper, we used a validation set to evaluate different parameters of our approach.
+				To allow comparisons with our approach, we provide here the indices of the images in the validation set and a python script to extract the data using the original training data of the KITTI Vision Benchmark.
+			</div>
+			<div id = "references">
+				<b>References</b>
+				<div id = "reference">A. Geiger, P. Lenz, R. Urtasun. <i>Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite</i>, CVPR, 2012.</div>
+				<div id = "reference">J. Behley, V. Steinhage, A.B. Cremers. <i>Laser-based Segment Classification Using a Mixture of Bag-of-Words</i>, IROS, 2013.</div>
+			</div>
+			<div id = "links">
+			<a id = "scans" href="http://www.cvlibs.net/datasets/kitti/eval_object.php">KITTI Vision Benchmark Suite</a><a id = "scans" href="validation_idxes.txt">validation indices</a><a id = "scans" href="extract-validation-set.py">python script</a>
+			</div>
+	</div>
+	<div id="dataset">
+			<h1>Freiburg Dataset</h1>
+			<div id = "screenshots">
+		  <a href="freiburg1.jpg"><img class = "dataset-screenshot" src="freiburg1_small.jpg"></a>
+			<a href="freiburg2.jpg"><img class = "dataset-screenshot" src="freiburg2_small.jpg"></a>
+			<a href="freiburg3.jpg"><img class = "dataset-screenshot" src="freiburg3_small.jpg"></a>
+			</div>
+			<div id = "labels">
+			  <b>Labels</b>
+				<div id = "classes">Ground(Street, Sidewalks), Building(Facade, Door, Window), Vegetation(Foliage, Bush, Lawn), Pole(Utility Poles, Trunks)</div>
+			</div>
+			<div id = "references">
+				<b>References</b>
+				<div id = "reference">B. Steder, G. Grisetti, W. Burgard. <i>Robust Place Recognition for 3D Range Data based on Point Features</i>, ICRA, 2010.</div>
+				<div id = "reference">J. Behley, V. Steinhage, A.B. Cremers. <i>Performance of Histogram Descriptors for the Classification of 3D Laser Range Data in Urban Environments</i>, ICRA, 2012.</div>
+			</div>
+			<div id = "links">
+			<a id = "scans" href="http://ais.informatik.uni-freiburg.de/projects/datasets/fr360/">scans</a><a id = "labels" href="freiburg_labels.zip">our labels</a><a id = "scans" href="freiburg_folds.zip">folds</a>
+			</div>
+	</div>
+	<div id="dataset">
+		<h1>Pittsburgh Dataset</h1>
+			<div id = "screenshots">
+		  <a href="pittsburgh1.jpg"><img class = "dataset-screenshot" src="pittsburgh1_small.jpg"></a>
+			<a href="pittsburgh2.jpg"><img class = "dataset-screenshot" src="pittsburgh2_small.jpg"></a>
+			<a href="pittsburgh3.jpg"><img class = "dataset-screenshot" src="pittsburgh3_small.jpg"></a>
+			</div>
+			<div id = "labels">
+			  <b>Labels</b>
+				<div id = "classes">Ground, Vehicle, Building, Vegetation, Pole, Wire</div>
+			</div>
+			<div id = "references">
+				<b>References</b>
+				<div id = "reference">D. Munoz, J. A. Bagnell, N. Vandapel, M. Hebert. <i>Contextual Classification with Functional Max-Margin Markov Networks</i>, CVPR, 2009.</div>
+			</div>
+			<div id = "links">
+			<a id = "scans" href="http://www.cs.cmu.edu/~vmr/datasets/oakland_3d/cvpr09/doc/">scans + labels</a><a id = "scans" href="pittsburgh_folds.zip">folds</a>
+			</div>
+	</div>
+	<div id="dataset">
+		<h1>Wachtberg Dataset</h1>
+			<div id = "screenshots">
+		  <a href="wachtberg1.jpg"><img class = "dataset-screenshot" src="wachtberg1_small.jpg"></a>
+			<a href="wachtberg2.jpg"><img class = "dataset-screenshot" src="wachtberg2_small.jpg"></a>
+			<a href="wachtberg3.jpg"><img class = "dataset-screenshot" src="wachtberg3_small.jpg"></a>
+			</div>
+			<div id = "labels">
+			  <b>Labels</b>
+				<div id = "classes">Ground, Vehicle, Building, Vegetation, Pole</div>
+			</div>
+			<div id = "references">
+				<b>References</b>
+				<div id = "reference">J. Behley, V. Steinhage, A.B. Cremers. <i>Performance of Histogram Descriptors for the Classification of 3D Laser Range Data in Urban Environments</i>, ICRA, 2012.</div>
+			</div>
+			<div id = "links">
+			<a id = "scans" href="wachtberg_folds.zip">folds</a>
+			</div>
+	</div>
+	</body>
+</html>
