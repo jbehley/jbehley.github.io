@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css">
+</head>
+
+<body>
+  <div id="title">Efficient Surfel-Based SLAM using 3D Laser Range Data in Urban Environments</div>
+  <div id="authors">Jens Behley and Cyrill Stachniss</div>
+  <div id="teaser"></div>
+  <div id="abstract">
+    <p>
+      <i>Abstract &mdash; </i>Accurate and reliable localization and mapping is a fundamental building block for most autonomous
+      robots. For this purpose, we propose a novel, dense approach to laser-based mapping that operates on three-dimensional
+      point clouds obtained from rotating laser sensors. We construct a surfel-based map and estimate the changes in the
+      robot's pose by exploiting the projective data association between the current scan and a rendered model view from
+      that surfel map. For detection and verification of a loop closure, we leverage the map representation to compose a
+      virtual view of the map before a potential loop closure, which enables a more robust detection even with low overlap
+      between the scan and the already mapped areas. Our approach is efficient and enables real-time capable registration.
+      At the same time, it is able to detect loop closures and to perform map updates in an online fashion. Our experiments
+      show that we are able to estimate globally consistent maps in large scale environments solely based on point cloud
+      data.
+    </p>
+  </div>
+
+  <div id="links"> <a href="../../papers/behley2018rss.pdf" target="blank">PDF</a> | <a href="">Code <a> (Coming soon)</div>
+
+  <!--div id="block">
+    <h3>Contributions</h3>
+    <li>
+
+    </li>
+  </div-->
+
+  <div id="block">
+    <h3>Bibtex</h3>
+    <pre id="bibtex"><code class="language-latex">@inproceedings{behley2018rss, 
+    author = {Jens Behley and Cyrill Stachniss},
+    title  = {Efficient Surfel-Based SLAM using 3D Laser Range Data in Urban Environments},
+    booktitle = {Proc.~of Robotics: Science and Systems~(RSS)},
+    year = {2018}  
+}</code></pre>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/prism.min.js"></script>
+</body>
+
+</html>

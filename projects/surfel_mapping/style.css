@@ -1,0 +1,45 @@
+body
+{
+	margin: 1em auto;
+	width: 60em;
+}
+
+
+
+div#title {
+  text-align: center;
+  font-size: 24pt;
+  font-weight: bold;
+  font-family: serif;
+  margin-bottom: 1em;
+}
+
+div#authors {
+  text-align: center;
+  font-size: 14pt;
+  margin-bottom: 2em;
+}
+
+div#abstract {
+  margin: 1em 5em;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  text-align: justify;
+  text-decoration: black;
+}
+
+div#links{
+  text-align: center;
+  margin:2em;
+}
+
+pre#bibtex {
+  margin: 1em 2em;
+}
+
+div#bibtex 
+{
+  
+}
