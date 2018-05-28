@@ -5,12 +5,22 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
 </head>
 
 <body>
   <div id="title">Efficient Surfel-Based SLAM using 3D Laser Range Data in Urban Environments</div>
   <div id="authors">Jens Behley and Cyrill Stachniss</div>
-  <div id="teaser"></div>
+  <div id="teaser">
+    <img src="teaser.svg">
+  </div>
   <div id="abstract">
     <p>
       <i>Abstract &mdash; </i>Accurate and reliable localization and mapping is a fundamental building block for most autonomous
@@ -26,17 +36,130 @@
     </p>
   </div>
 
-  <div id="links"> <a href="../../papers/behley2018rss.pdf" target="blank">PDF</a> | <a href="">Code <a> (Coming soon)</div>
-
-  <!--div id="block">
-    <h3>Contributions</h3>
-    <li>
-
-    </li>
-  </div-->
+  <div id="links">
+    <a href="../../papers/behley2018rss.pdf" target="blank">
+      <i class="far fa-file-pdf"></i> PDF</a> |
+    <a href="">
+      <i class="fab fa-github fa-1g"></i> Code
+      <a> (Coming soon)</div>
 
   <div id="block">
-    <h3>Bibtex</h3>
+    <h3>Data</h3>
+    <p>Here, we provide configuration and poses files for our implementation to reproduce the presented results. For the sensor
+      poses, we follow the KITTI convention, i.e., every line in the file corresponds to the entries of a homogenous transformation
+      $\mathbf{T} \in \mathbb{R}^{4 \times 4}$ in row-major format, where the last row $(0, 0, 0, 1)$ has been omitted.
+    </p>
+    <p>
+      Note, we provide only trajectories of the testset for our approach with loop closures. However, you can generate the trajectories
+      yourself using the configuration for the other approaches.
+    </p>
+
+    <table class="paper">
+      <thead>
+        <tr>
+          <th>Approach</th>
+          <th>config</th>
+          <th>poses</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Frame-to-Frame</td>
+          <td>
+            <center>
+              <a href="frame-to-frame.xml">
+                <i class="far fa-file-alt"></i>
+              </a>
+            </center>
+          </td>
+          <td>
+            <center>
+              <a href="frame-to-frame.zip">
+                <i class="far fa-file-alt"></i>
+              </a>
+            </center>
+          </td>
+        </tr>
+        <tr>
+          <td>Frame-to-Model (no loop closure)</td>
+          <td>
+            <center>
+              <a href="frame-to-model-noloop.xml">
+                <i class="far fa-file-alt"></i>
+              </a>
+            </center>
+          </td>
+          <td>
+            <center>
+              <a href="frame-to-model-noloop.zip">
+                <i class="far fa-file-alt"></i>
+              </a>
+            </center>
+          </td>
+        </tr>
+        <tr>
+          <td>Frame-to-Model (with loop closure)</td>
+          <td>
+            <center>
+              <a href="frame-to-model-loop.xml">
+                <i class="far fa-file-alt"></i>
+              </a>
+            </center>
+          </td>
+          <td>
+            <center>
+              <a href="frame-to-model-loop.zip">
+                <i class="far fa-file-alt"></i>
+              </a>
+            </center>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+  <div id="block">
+    <h3>Implementation Details</h3>
+    <p>We implemented our approach using only OpenGL core profile functionality. This enables us to run our approach on all
+      common GPUs (including Nvidia, AMD, but also Intel). However, this decision entails also some restrictions on how you
+      can use the library.</p>
+    <ol>
+      <li>Single thread: Despite using the GPU for fast computations, the approach must run in a single thread. Therefore, it
+        is only possible to use the library in the same thread in which the OpenGL context was created. This is particularly
+        imported with ROS, where callbacks are usually run in separate threads, i.e., the context initialization must happen
+        inside the callback.</li>
+      <li>There must be a OpenGL context available. For linux, this means that a X server with a display available or must be
+        "faked" via Xvfb. This is still needed even if no visual output is created.</li>
+    </ol>
+
+    <p>With the restriction of only using OpenGL, we also had to find ways to perform some computations in the different shader
+      stages. Fast computation of the terms $\mathbf{J^T W J}$ and $\mathbf{J^Tr}$ with plain OpenGL was the most challenging
+      part. Here, we exploited blending,
+      <code>glEnable(GL_BLEND)</code>, to compute the sum via the geometry shader, which generates the corresponding pixel positions to fill the appropriate
+      entries of the framebuffers output texture. For each vertex coming from the vertex shader, the geometry shader generates
+      all $6\times 6 + 6 \times 1$ entries of the needed terms, which are then summed via blending in the fragment shader.
+    </p>
+
+    <table class="nostyle">
+      <tr>
+        <td><img src="runtime_blend.svg"></td>
+        <td>
+          <p>However, just naively passing each vertex from the vertex map through the geometry shader results in inferior performance
+            of the overall computation. For a significant speedup, reducing the average computation time from $1.4\,ms$ to
+            $0.4\,ms$, we compute partial sums inside the geometry shader. We suppose that this reduces the access conflicts
+            of the blending operation, since multiple GPU threads try to access the same memory locations.
+          </p>
+          <p>The left figure shows the avg. runtime for different number of partial sum entries in the geometry shader.</p>
+        </td>
+      </tr>
+    </table>
+
+
+  </div>
+
+  <div id="block">
+    <h3>Citation</h3>
     <pre id="bibtex"><code class="language-latex">@inproceedings{behley2018rss, 
     author = {Jens Behley and Cyrill Stachniss},
     title  = {Efficient Surfel-Based SLAM using 3D Laser Range Data in Urban Environments},
