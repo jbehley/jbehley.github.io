@@ -67,14 +67,14 @@
           <td>Frame-to-Frame</td>
           <td>
             <center>
-              <a href="frame-to-frame.xml">
+              <a href="rss2018_frame2frame.xml">
                 <i class="far fa-file-alt"></i>
               </a>
             </center>
           </td>
           <td>
             <center>
-              <a href="frame-to-frame.zip">
+              <a href="rss2018_frame2frame.zip">
                 <i class="far fa-file-alt"></i>
               </a>
             </center>
@@ -84,14 +84,14 @@
           <td>Frame-to-Model (no loop closure)</td>
           <td>
             <center>
-              <a href="frame-to-model-noloop.xml">
+              <a href="rss2018_frame2model_noloop.xml">
                 <i class="far fa-file-alt"></i>
               </a>
             </center>
           </td>
           <td>
             <center>
-              <a href="frame-to-model-noloop.zip">
+              <a href="rss2018_frame2model_noloop.zip">
                 <i class="far fa-file-alt"></i>
               </a>
             </center>
@@ -101,14 +101,14 @@
           <td>Frame-to-Model (with loop closure)</td>
           <td>
             <center>
-              <a href="frame-to-model-loop.xml">
+              <a href="rss2018_frame2model_loop.xml">
                 <i class="far fa-file-alt"></i>
               </a>
             </center>
           </td>
           <td>
             <center>
-              <a href="frame-to-model-loop.zip">
+              <a href="rss2018_frame2model_loop.zip">
                 <i class="far fa-file-alt"></i>
               </a>
             </center>
@@ -143,14 +143,17 @@
 
     <table class="nostyle">
       <tr>
-        <td><img src="runtime_blend.svg"></td>
+        <td>
+          <img src="runtime_blend.svg">
+        </td>
         <td>
           <p>However, just naively passing each vertex from the vertex map through the geometry shader results in inferior performance
             of the overall computation. For a significant speedup, reducing the average computation time from $1.4\,ms$ to
             $0.4\,ms$, we compute partial sums inside the geometry shader. We suppose that this reduces the access conflicts
             of the blending operation, since multiple GPU threads try to access the same memory locations.
           </p>
-          <p>The left figure shows the avg. runtime for different number of partial sum entries in the geometry shader.</p>
+          <p>The left figure shows the avg. runtime for different number of partial sum entries in the geometry shader. Clearly
+            visible is an optimal size of 64 entries in the partial sum.</p>
         </td>
       </tr>
     </table>
