@@ -121,6 +121,7 @@
 
   <div id="block">
     <h3>Implementation Details</h3>
+
     <p>We implemented our approach using only OpenGL core profile functionality. This enables us to run our approach on all
       common GPUs (including Nvidia, AMD, but also Intel). However, this decision entails also some restrictions on how you
       can use the library.</p>
@@ -141,24 +142,18 @@
       all $6\times 6 + 6 \times 1$ entries of the needed terms, which are then summed via blending in the fragment shader.
     </p>
 
-    <table class="nostyle">
-      <tr>
-        <td>
-          <img src="runtime_blend.svg">
-        </td>
-        <td>
-          <p>However, just naively passing each vertex from the vertex map through the geometry shader results in inferior performance
-            of the overall computation. For a significant speedup, reducing the average computation time from $1.4\,ms$ to
-            $0.4\,ms$, we compute partial sums inside the geometry shader. We suppose that this reduces the access conflicts
-            of the blending operation, since multiple GPU threads try to access the same memory locations.
-          </p>
-          <p>The left figure shows the avg. runtime for different number of partial sum entries in the geometry shader. Clearly
-            visible is an optimal size of 64 entries in the partial sum.</p>
-        </td>
-      </tr>
-    </table>
+    <img src="runtime_blend.svg" style="float:left;">
 
-
+    <p>However, just naively passing each vertex from the vertex map through the geometry shader results in inferior performance
+      of the overall computation. For a significant speedup, reducing the average computation time from $1.5\,ms$ to $0.3\,ms$,
+      we compute partial sums inside the geometry shader. We suppose that this reduces the access conflicts of the blending
+      operation, since multiple GPU threads try to access the same memory locations and therefore leads to serialization
+      of the pixel operations in the fragmet shader.
+    </p>
+    <p>The left figure shows the avgerage runtime for different number of partial sum entries in the geometry shader. Clearly
+      visible is an optimal size of $64$ entries in the partial sum. Also visible is a significantly reduced maximal computation
+      time. This improvement lead overall to a considerable reduction of the computation time per timestep and also helped
+      to get near real-time performance of the loop closure detection and verification.</p>
   </div>
 
   <div id="block">

@@ -50,13 +50,11 @@ table.paper th, td {
   padding: 5px;
 }
 
-table.paper th.center
-{
-  text-align: center;
-}
+
 
 table.paper thead th:nth-child(2), table.paper thead th:nth-child(3) {
   width: 130px;
+  text-align: center;
 }
 
 p code {
@@ -69,7 +67,7 @@ p code {
   border-radius: 3px;
 }
 
-div p, div li, div table {
+div p, div li, div table, div img, div h4 {
   margin: 0em 2em 1em 2em;
   hyphens: auto;
   text-align: justify;
