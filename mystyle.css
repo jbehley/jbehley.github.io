@@ -73,6 +73,7 @@ div.abstract{
 	background:#E0AF66;
 	text-align: justify;
 	border: 1pt dashed gray;
+	hyphens: auto;
 }
 
 img#email {
