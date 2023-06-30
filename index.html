@@ -20,8 +20,8 @@
 		<h1>contact</h1>
 		<div id="photo"><img src="images/jens_web.jpg" alt="Jens Behley" width="100"></div>
 
-		<div id="name"><b>Dr. Jens Behley</b></div>
-		<div id="position">Postdoctoral Researcher</div>
+		<div id="name"><b>PD Dr. Jens Behley</b></div>
+		<div id="position">Lecturer (Privatdozent)</div>
 		<div id="address">Rheinische Friedrich-Wilhelms-Universit&auml;t Bonn<br />
 			Institute of Geodesy and Geoinformation<br />
 			Nussallee 15<br />
@@ -33,477 +33,572 @@
 
 	</div>
 
+	<div id="awards">
+		<h1>Awards</h1>
+		<ul>
+			<li>Outstanding Reviewer at IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023.</li>
+			<li>Outstanding Reviewer at European Conference on Computer Vision (ECCV), 2022.</li>
+			<li>Finalist for IROS Best Paper Award on Agri-Robotics at IEEE/RSJ International Conference on Intelligent Robots
+				and Systems (IROS), 2022.</li>
+			<li>Outstanding Reviewer at IEEE Robotics and Automation Letters (RA-L), 2022.</li>
+			<li>Outstanding Reviewer at IEEE International Conference on Robotics and Automation (ICRA), 2022.</li>
+			<li>Outstanding Reviewer at IEEE/CVF International Conference on Computer Vision (ICCV), 2021.</li>
+			<li>Faculty Award for Geodesy from Agricultural Faculty of University of Bonn for “Adaptive Robust Kernels for
+				Non-Linear Least Squares Problems” by Chebrolu et al., IEEE RA-L, 2021. (co-authored paper), 2021.</li>
+			<li>Outstanding Reviewer at IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2021.</li>
+			<li>Finalist for Best System Paper at Robotics: Science and Systems (RSS), 2020.</li>
+			<li>Diplomarbeitspreis der Bonner Informatik Gesellschaft e.V., 2009.</li>
+			</li>
+		</ul>
+	</div>
+
 	<div id="publications">
 		<h1>publications</h1>
 		<div id="publication">
-			<span id="author">A. Milioto, I. Vizzo, J. Behley, and C. Stachniss.</span>
-			<span id="title">RangeNet++: Fast and Accurate LiDAR Semantic Segmentation</span>,
-			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems
-				(IROS),</span>
-			<span id="year">2019.</span>
-			<div class="abstract" id="milioto2019iros">
-				<b><i>Abstract</i> &mdash; </b>Perception in autonomous vehicles is often carried out through a suite of
-				different sensing modalities. Given the massive amount of openly available labeled RGB data and the advent of
-				high-quality deep learning algorithms for image-based recognition, high-level semantic perception tasksare
-				pre-dominantly solved using high-resolution cameras. As a result of that, other sensor modalities potentially
-				useful for this task are often ignored. In this paper, we push the state of the art in LiDAR-only semantic
-				segmentation forward in order to provide another independent source of semantic information to the vehicle. Our
-				approach can accurately perform full semantic segmentation of LiDAR point clouds at sensor frame rate. We
-				exploit range images as an intermediate representation in combination with a Convolutional Neural Network (CNN)
-				exploiting the rotating LiDAR sensor model. To obtain accurate results, we propose a novel post-processing
-				algorithm that deals with problems arising from this intermediate representation such as discretization errors
-				and blurry CNN outputs. We implemented and thoroughly evaluated our approach including several comparisons to
-				thestate of the art. Our experiments show that our approachoutperforms state-of-the-art approaches, while still
-				running online on a single embedded GPU. The code can be accessed at https://github.com/PRBonn/lidar-bonnetal.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('milioto2019iros')">abstract</a>
-				<a href="http://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/milioto2019iros.pdf">pdf</a>
-				<a href="https://github.com/PRBonn/lidar-bonnetal">code</a></div>
+			<span id="author">B. Mersch, T. Guadagnino, X. Chen, I. Vizzo, J. Behley, and C. Stachniss</span>
+			<span id="title">Building Volumetric Beliefs for Dynamic Environments Exploiting Map-Based Moving Object Segmentation</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages"></span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/mersch2023ral.pdf">pdf</a></div>
 		</div>
-
 		<div id="publication">
-			<span id="author">X. Chen, A. Milioto, E. Palazzolo, P. Giguère, J. Behley, and C. Stachniss.</span>
-			<span id="title">SuMa++: Efficient LiDAR-based Semantic SLAM</span>,
-			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems
-				(IROS),</span>
-			<span id="year">2019.</span>
-			<div class="abstract" id="chen2019iros">
-				<b><i>Abstract</i> &mdash; </b>Reliable and accurate localization and mapping are key components of most
-				autonomous systems. Besides geometric information about the mapped environment, the semantics plays an important
-				role to enable intelligent navigation behaviors. In most realistic environments, this task is particularly
-				complicated due to dynamics caused by moving objects, which can corrupt the mapping step or derail localization.
-				In this paper, we propose an extension of a recently published surfel-based mapping approach exploiting
-				three-dimensional laser range scans by integrating semantic information to facilitate the mapping process. The
-				semantic information is efficiently extracted by a fully convolutional neural network and rendered on a
-				spherical projection of the laser range data. This computed semantic segmentation results in point-wise labels
-				for the whole scan, allowing us to build a semantically-enriched map with labeled surfels. This semantic map
-				enables us to reliably filter moving objects, but also improve the projective scan matching via semantic
-				constraints. Our experimental evaluationon challenging highways sequences from KITTI dataset with very few
-				static structures and a large amount of moving cars shows the advantage of our semantic SLAM approach in
-				comparison to a purely geometric, state-of-the-art approach.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('chen2019iros')">abstract</a>
-				<a href="http://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/chen2019iros.pdf">pdf</a>
-				<a href="https://github.com/PRBonn/semantic_suma/">code</a></div>
+			<span id="author">Y.L. Chong, J. Weyler, P. Lottes, J. Behley, and C. Stachniss</span>
+			<span id="title">Unsupervised Generation of Labeled Training Images for Crop-Weed Segmentation in New Fields and on Different Robotic Platforms</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages"></span>
+			<span id="year">2023.</span>
+			<div id="links"></div>
 		</div>
-
 		<div id="publication">
-			<span id="author">E. Palazzolo, J. Behley, P. Lottes, P. Giguère, and C. Stachniss.</span>
-			<span id="title">ReFusion: 3D Reconstruction in Dynamic Environments for RGB-D Cameras Exploiting
-				Residuals</span>,
-			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems
-				(IROS),</span>
-			<span id="year">2019.</span>
-			<div class="abstract" id="palazzolo2019iros">
-				<b><i>Abstract</i> &mdash; </b>Mapping and localization are essential capabilities of robotic systems. Although
-				the majority of mapping systems focus on static environments, the deployment in real-world situations requires
-				them to handle dynamic objects. In this paper, we propose an approach for an RGB-D sensor that is able
-				toconsistently map scenes containing multiple dynamic elements. For localization and mapping, we employ an
-				efficient direct tracking on the truncated signed distance function (TSDF) andleverage color information encoded
-				in the TSDF to estimate thepose of the sensor. The TSDF is efficiently represented using voxel hashing, with
-				most computations parallelized on a GPU. For detecting dynamics, we exploit the residuals obtained afteran
-				initial registration, together with the explicit modeling of free space in the model. We evaluate our approach
-				on existing datasets, and provide a new dataset showing highly dynamic scenes. These experiments show that our
-				approach often surpass other state-of-the-art dense SLAM methods. We make available our dataset with the ground
-				truth for both the trajectory of the RGB-D sensor obtained by a motion capture system and the model of the
-				static environment using a high-precision terrestrial laser scanner. Finally, we release our approach as open
-				source code.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('palazzolo2019iros')">abstract</a>
-				<a href="http://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/palazzolo2019iros.pdf">pdf</a>
-				<a href="https://github.com/PRBonn/refusion">code</a></div>
+			<span id="author">Y. Pan, F. Magistri, T. Läbe, E. Marks, C. Smitt, C.S. McCool, J. Behley, and C. Stachniss</span>
+			<span id="title">Panoptic Mapping with Fruit Completion and Pose Estimation for Horticultural Robots</span>,
+			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
+			<span id="year">2023.</span>
+			<div id="links"></div>
 		</div>
-
 		<div id="publication">
-			<span id="author">J. Behley*, M. Garbade*, A. Milioto, J. Quenzel, S. Behnke, C. Stachniss, and J. Gall.</span>
+			<span id="author">N. Zimmerman, M. Sodano, E. Marks, J. Behley, and C. Stachniss</span>
+			<span id="title">Long-Term Indoor Localization with Metric-Semantic Mapping using a Floor Plan Prior</span>,
+			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
+			<span id="year">2023.</span>
+			<div id="links"></div>
+		</div>
+		<div id="publication">
+			<span id="author">J. Weyler, F. Magistri, E. Marks, Y. Chong, M. Roggiolani, N. Chebrolu, C. Stachniss, and J. Behley</span>
+			<span id="title">PhenoBench --- A Large Dataset and Benchmarks for Semantic Image Interpretationin the Agricultural Domain</span>,
+			<span id="proceeding">arXiv preprint,</span>
+			<span id="pages">vol. arXiv:2306.04557,</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/weyler2023arxiv.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">L. Wiesmann, T. Guadagnino, I. Vizzo, N. Zimmerman, Y. Pan, H. Kuang, J. Behley, and C. Stachniss</span>
+			<span id="title">LocNDF: Neural Distance Field Mapping for Robot Localization</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages"></span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/wiesmann2023ral-icra.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">E. Marks, M. Sodano, F. Magistri, L. Wiesmann, D. Desai, R. Marcuzzi, J. Behley, and C. Stachniss</span>
+			<span id="title">High Precision Leaf Instance Segmentation in Point Clouds Obtained Under Real Field Conditions</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages"></span>
+			<span id="year">2023.</span>
+			<div id="links"></div>
+		</div>
+		<div id="publication">
+			<span id="author">H. Lim, L. Nunes, B. Mersch, X. Chen, J. Behley, H. Myung, and C. Stachniss</span>
+			<span id="title">ERASOR2: Instance-Aware Robust 3D Mapping of the Static World in Dynamic Scenes</span>,
+			<span id="proceeding">Proc. of Robotics: Science and Systems (RSS),</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/lim2023rss.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">J. Weyler, T. Läbe, F. Magistri, J. Behley, and C. Stachniss</span>
+			<span id="title">Towards Domain Generalization in Crop and Weed Segmentation for Precision Farming Robots</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 8(6), pp. 3310-3317,</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/weyler2023ral.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">L. Nunes, L. Wiesmann, R. Marcuzzi, X. Chen, J. Behley, and C. Stachniss</span>
+			<span id="title">Temporal Consistent 3D LiDAR Representation Learning for Semantic Perception in Autonomous Driving</span>,
+			<span id="proceeding">Proc. of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR),</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/nunes2023cvpr.pdf">pdf</a><a href="https://github.com/PRBonn/TARL">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">H. Kuang, X. Chen, T. Guadagnino, N. Zimmerman, J. Behley, and C. Stachniss</span>
+			<span id="title">IR-MCL: Implicit Representation-Based Online Global Localization</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 8(3), pp. 1627-1634,</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/kuang2023ral.pdf">pdf</a><a href="https://github.com/PRBonn/ir-mcl">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">X. Zhong, Y. Pan, J. Behley, and C. Stachniss</span>
+			<span id="title">SHINE-Mapping: Large-Scale 3D Mapping Using Sparse Hierarchical Implicit Neural Representations</span>,
+			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/zhong2023icra.pdf">pdf</a><a href="https://github.com/PRBonn/SHINE_mapping">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">M. Sodano, F. Magistri, T. Guadagnino, J. Behley, and C. Stachniss</span>
+			<span id="title">Robust Double-Encoder Network for RGB-D Panoptic Segmentation</span>,
+			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/sodano2023icra.pdf">pdf</a><a href="https://github.com/PRBonn/PS-res-excite">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">A. Riccardi, S. Kelly, E. Marks, F. Magistri, T. Guadagnino, J. Behley, M. Bennewitz, and C. Stachniss</span>
+			<span id="title">Fruit Tracking Over Time Using High-Precision Point Clouds</span>,
+			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/riccardi2023icra.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">G. Roggiolani, M. Sodano, F. Magistri, T. Guadagnino, J. Behley, and C. Stachniss</span>
+			<span id="title">Hierarchical Approach for Joint Semantic, Plant Instance, and Leaf Instance Segmentation in the Agricultural Domain</span>,
+			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/roggiolani2023icra-hajs.pdf">pdf</a><a href="https://github.com/PRBonn/HAPT">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">G. Roggiolani, F. Magistri, T. Guadagnino, J. Weyler, G. Grisetti, C. Stachniss, and J. Behley</span>
+			<span id="title">On Domain-Specific Pre-Training for Effective Semantic Perception in Agricultural Robotics</span>,
+			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/roggiolani2023icra-odsp.pdf">pdf</a><a href="https://github.com/PRBonn/agri-pretraining">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">M. Zeller, V.S. Sandhu, B. Mersch, J. Behley, M. Heidingsfeld, and C. Stachniss</span>
+			<span id="title">Radar Velocity Transformer: Single-scan Moving Object Segmentation in Noisy Radar Point Clouds</span>,
+			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/zeller2023icra.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">I. Vizzo, T. Guadagnino, B. Mersch, L. Wiesmann, J. Behley, and C. Stachniss</span>
+			<span id="title">KISS-ICP: In Defense of Point-to-Point ICP -- Simple, Accurate, and Robust Registration If Done the Right Way</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 8(2), pp. 1-8,</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/vizzo2023ral.pdf">pdf</a><a href="https://github.com/PRBonn/kiss-icp">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">R. Marcuzzi, L. Nunes, L. Wiesmann, J. Behley, and C. Stachniss</span>
+			<span id="title">Mask-Based Panoptic LiDAR Segmentation for Autonomous Driving</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 8(2), pp. 1141-1148,</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/marcuzzi2023ral.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">L. Wiesmann, L. Nunes, J. Behley, and C. Stachniss</span>
+			<span id="title">KPPR: Exploiting Momentum Contrast for Point Cloud-Based Place Recognition</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 8(2), pp. 592-599,</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/wiesmann2023ral.pdf">pdf</a><a href="https://github.com/PRBonn/kppr">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">Y. Wu, J. Kuang, X. Niu, J. Behley, L. Klingbeil, and H. Kuhlmann</span>
+			<span id="title">Wheel-SLAM: Simultaneous Localization and Terrain Mapping Using One Wheel-mounted IMU</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 8(1), pp. 280-287,</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/wu2023ral.pdf">pdf</a><a href="https://github.com/i2Nav-WHU/Wheel-SLAM">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">M. Zeller, J. Behley, M. Heidingsfeld, and C. Stachniss</span>
+			<span id="title">Gaussian Radar Transformer for Semantic Segmentation in Noisy Radar Data</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 8(1), pp. 344-351,</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/zeller2023ral.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">N. Zimmerman, T. Guadagnino, X. Chen, J. Behley, and C. Stachniss</span>
+			<span id="title">Long-Term Localization using Semantic Cues in Floor Plan Maps</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 8(1), pp. 176-183,</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/zimmerman2023ral.pdf">pdf</a><a href="https://github.com/PRBonn/hsmcl">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">H. Müller, N. Zimmerman, T. Polonelli, M. Magno, J. Behley, C. Stachniss, and L. Benini</span>
+			<span id="title">Fully On-board Low-Power Localization with Multizone Time-of-Flight Sensors on Nano-UAVs</span>,
+			<span id="proceeding">Proc. of Design, Automation & Test in Europe Conference & Exhibition (DATE),</span>
+			<span id="year">2023.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/mueller2023date.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">N. Zimmerman, L. Wiesmann, T. Guadagnino, T. Läbe, J. Behley, and C. Stachniss</span>
+			<span id="title">Robust Onboard Localization in Changing Environments Exploiting Text Spotting</span>,
+			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
+			<span id="year">2022.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/zimmerman2022iros.pdf">pdf</a><a href="https://github.com/PRBonn/tmcl">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">F. Magistri, E. Marks, S. Nagulavancha, I. Vizzo, T. L{ä}be, J. Behley, M. Halstead, C. McCool, and C. Stachniss</span>
+			<span id="title">Contrastive 3D Shape Completion and Reconstruction for Agricultural Robots using RGB-D Frames</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 7(4), pp. 10120-10127,</span>
+			<span id="year">2022.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/magistri2022ral-iros.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">I. Vizzo, B. Mersch, R. Marcuzzi, L. Wiesmann, J. Behley, and C. Stachniss</span>
+			<span id="title">Make it Dense: Self-Supervised Geometric Scan Completion of Sparse 3D LiDAR Scans in Large Outdoor Environments</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 7(3), pp. 8534-8541,</span>
+			<span id="year">2022.</span>
+			<div id="links"><a href="https://github.com/PRBonn/make_it_dense">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">L. Nunes, X. Chen, R. Marcuzzi, A. Osep, L. Leal-Taixé, C. Stachniss, and J. Behley</span>
+			<span id="title">Unsupervised Class-Agnostic Instance Segmentation of 3D LiDAR Data for Autonomous Vehicles</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages"></span>
+			<span id="year">2022.</span>
+			<div id="links"><a href="https://github.com/PRBonn/3DUIS">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">B. Mersch, X. Chen, I. Vizzo, L. Nunes, J. Behley, and C. Stachniss</span>
+			<span id="title">Receding Moving Object Segmentation in 3D LiDAR Data Using Sparse 4D Convolutions</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 7(3), pp. 7503-7510,</span>
+			<span id="year">2022.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/mersch2022ral.pdf">pdf</a><a href="https://github.com/PRBonn/4DMOS">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">T. Guadagnino, X. Chen, M. Sodano, J. Behley, G. Grisetti, and C. Stachniss</span>
+			<span id="title">Fast Sparse LiDAR Odometry Using Self-Supervised Feature Selection on Intensity Images</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 7(3), pp. 7597-7604,</span>
+			<span id="year">2022.</span>
+			<div id="links"></div>
+		</div>
+		<div id="publication">
+			<span id="author">L. Wiesmann, T. Guadagnino, I. Vizzo, G. Grisetti, J. Behley, and C. Stachniss</span>
+			<span id="title">DCPCR: Deep Compressed Point Cloud Registration in Large-Scale Outdoor Environments</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 7(3), pp. 6327-6334,</span>
+			<span id="year">2022.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/wiesmann2022ral-iros.pdf">pdf</a><a href="https://github.com/PRBonn/DCPCR">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">X. Chen, B. Mersch, L. Nunes, R. Marcuzzi, I. Vizzo, J. Behley, and C. Stachniss</span>
+			<span id="title">Automatic Labeling to Generate Training Data for Online LiDAR-Based Moving Object Segmentation</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 7(3), pp. 6107-6114,</span>
+			<span id="year">2022.</span>
+			<div id="links"><a href="https://github.com/PRBonn/auto-mos">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">I. Vizzo, T. Guadagnino, J. Behley, and C. Stachniss</span>
+			<span id="title">VDBFusion: Flexible and Efficient TSDF Integration of Range Sensor Data</span>,
+			<span id="proceeding">Sensors,</span>
+			<span id="pages">vol. 22(3),</span>
+			<span id="year">2022.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/vizzo2022sensors.pdf">pdf</a><a href="https://github.com/PRBonn/vdbfusion">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">L. Wiesmann, R. Marcuzzi, C. Stachniss, and J. Behley</span>
+			<span id="title">Retriever: Point Cloud Retrieval in Compressed 3D Maps</span>,
+			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+			<span id="year">2022.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/wiesmann2022icra.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">J. Weyler, J. Quakernack, P. Lottes, J. Behley, and C. Stachniss</span>
+			<span id="title">Joint Plant and Leaf Instance Segmentation on Field-Scale UAV Imagery</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 7(2), pp. 3787-3794,</span>
+			<span id="year">2022.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/weyler2022ral.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">L. Nunes, R. Marcuzzi, X. Chen, J. Behley, and C. Stachniss</span>
+			<span id="title">SegContrast: 3D Point Cloud Feature Representation Learning through Self-supervised Segment Discrimination</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 7(2), pp. 2116-2123,</span>
+			<span id="year">2022.</span>
+			<div id="links"><a href="https://github.com/PRBonn/segcontrast">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">R. Marcuzzi, L. Nunes, L. Wiesmann, I. Vizzo, J. Behley, and C. Stachniss</span>
+			<span id="title">Contrastive Instance Association for 4D Panoptic Segmentation using Sequences of 3D LiDAR Scans</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 7(2), pp. 1550-1557,</span>
+			<span id="year">2022.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/marcuzzi2022ral.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">J. Weyler, F. Magistri, P. Seitz, J. Behley, and C. Stachniss</span>
+			<span id="title">In-Field Phenotyping Based on Crop Leaf and Plant Instance Segmentation</span>,
+			<span id="proceeding">Proc. of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV),</span>
+			<span id="year">2022.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/weyler2022wacv.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">B. Mersch, X. Chen, J. Behley, and C. Stachniss</span>
+			<span id="title">Self-supervised Point Cloud Prediction Using 3D Spatio-temporal Convolutional Networks</span>,
+			<span id="proceeding">Proc. of the Conference on Robot Learning (CoRL),</span>
+			<span id="year">2021.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/mersch2021corl.pdf">pdf</a><a href="https://github.com/PRBonn/point-cloud-prediction">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">J. Behley, M. Garbade, A. Milioto, J. Quenzel, S. Behnke, J. Gall, and C. Stachniss</span>
+			<span id="title">Towards 3D LiDAR-based semantic scene understanding of 3D point cloud sequences: The SemanticKITTI Dataset</span>,
+			<span id="proceeding">International Journal on Robotics Research (IJRR),</span>
+			<span id="pages">vol. 40(8-9), pp. 959-967,</span>
+			<span id="year">2021.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/behley2021ijrr.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">X. Chen, T. Läbe, A. Milioto, T. R\"ohling, J. Behley, and C. Stachniss</span>
+			<span id="title">OverlapNet: A Siamese Network for Computing LiDAR Scan Similarity with Applications to Loop Closing and Localization</span>,
+			<span id="proceeding">Autonomous Robots,</span>
+			<span id="pages">vol. 46, pp. 61-81,</span>
+			<span id="year">2021.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/chen2021auro.pdf">pdf</a><a href="https://github.com/PRBonn/OverlapNet">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">P. Rottmann, T. Posewsky, A. Milioto, C. Stachniss, and J. Behley</span>
+			<span id="title">Improving Monocular Depth Estimation by Semantic Pre-training</span>,
+			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
+			<span id="year">2021.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/rottmann2021iros.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">X. Chen, S. Li, B. Mersch, L. Wiesmann, J. Gall, J. Behley, and C. Stachniss</span>
+			<span id="title">Moving Object Segmentation in 3D LiDAR Data: A Learning-based Approach Exploiting Sequential Data</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 6, pp. 6529-6536,</span>
+			<span id="year">2021.</span>
+			<div id="links"><a href="https://github.com/PRBonn/LiDAR-MOS">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">M. Ayg\"un, A. Osep, M. Weber, M. Maximov, C. Stachniss, J. Behley, and L. Leal-Taixe</span>
+			<span id="title">4D Panoptic Segmentation</span>,
+			<span id="proceeding">Proc. of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR),</span>
+			<span id="year">2021.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/ayguen2021cvpr.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">F. Magistri, N. Chebrolu, J. Behley, and C. Stachniss</span>
+			<span id="title">Towards In-Field Phenotyping Exploiting Differentiable Rendering with Self-Consistency Loss</span>,
+			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+			<span id="year">2021.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/magistri2021icra.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">I. Vizzo, X. Chen, N. Chebrolu, J. Behley, and C. Stachniss</span>
+			<span id="title">Poisson Surface Reconstruction for LiDAR Odometry and Mapping</span>,
+			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+			<span id="year">2021.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/vizzo2021icra.pdf">pdf</a><a href="https://github.com/PRBonn/puma">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">X. Chen, I. Vizzo, T. L{ä}be, J. Behley, and C. Stachniss</span>
+			<span id="title">Range Image-based LiDAR Localization for Autonomous Vehicles</span>,
+			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+			<span id="year">2021.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/chen2021icra.pdf">pdf</a><a href="https://github.com/PRBonn/range-mcl">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">J. Behley, A. Milioto, and C. Stachniss</span>
+			<span id="title">A Benchmark for LiDAR-based Panoptic Segmentation based on KITTI</span>,
+			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
+			<span id="year">2021.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/behley2021icra.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">N. Chebrolu, T. L\"{a}be, O. Vysotska, J. Behley, and C. Stachniss</span>
+			<span id="title">Adaptive Robust Kernels for Non-Linear Least Squares Problems</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 6, pp. 2240-2247,</span>
+			<span id="year">2021.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/chebrolu2021ral.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">J. Weyler, A. Milioto, T. Falck, J. Behley, and C. Stachniss</span>
+			<span id="title">Joint Plant Instance Detection and Leaf Count Estimation for In-Field Plant Phenotyping</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 6, pp. 3599-3606,</span>
+			<span id="year">2021.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/weyler2021ral.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">L. Wiesmann, A. Milioto, X. Chen, C. Stachniss, and J. Behley</span>
+			<span id="title">Deep Compression for Dense Point Cloud Maps</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
+			<span id="pages">vol. 6, pp. 2060-2067,</span>
+			<span id="year">2021.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/wiesmann2021ral.pdf">pdf</a><a href="https://github.com/PRBonn/deep-point-map-compression">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">A. Milioto, J. Behley, C. McCool, and C. Stachniss</span>
+			<span id="title">LiDAR Panoptic Segmentation for Autonomous Driving</span>,
+			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
+			<span id="year">2020.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/milioto2020iros.pdf">pdf</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">X. Chen, T. Läbe, L. Nardi, J. Behley, and C. Stachniss</span>
+			<span id="title">Learning an Overlap-based Observation Model for 3D LiDAR Localization</span>,
+			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
+			<span id="year">2020.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/chen2020iros.pdf">pdf</a><a href="https://github.com/PRBonn/overlap_localization">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">F. Langer, A. Milioto, A. Haag, J. Behley, and C. Stachniss</span>
+			<span id="title">Domain Transfer for Semantic Segmentation of LiDAR Data using Deep Neural Networks</span>,
+			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
+			<span id="year">2020.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/langer2020iros.pdf">pdf</a><a href="https://github.com/PRBonn/lidar_transfer">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">X. Chen, T. Läbe, A. Milioto, T. R\"ohling, O. Vysotska, A. Haag, J. Behley, and C. Stachniss</span>
+			<span id="title">OverlapNet: Loop Closing for LiDAR-based SLAM</span>,
+			<span id="proceeding">Proc. of Robotics: Science and Systems (RSS),</span>
+			<span id="year">2020.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/chen2020rss.pdf">pdf</a><a href="https://github.com/PRBonn/OverlapNet/">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">N. Chebrolu, T. Laebe, O. Vysotska, J. Behley, and C. Stachniss</span>
+			<span id="title">Adaptive Robust Kernels for Non-Linear Least Squares Problems</span>,
+			<span id="proceeding">arXiv preprint,</span>
+			<span id="pages"></span>
+			<span id="year">2020.</span>
+			<div id="links"></div>
+		</div>
+		<div id="publication">
+			<span id="author">J. Behley, A. Milioto, and C. Stachniss</span>
+			<span id="title">A Benchmark for LiDAR-based Panoptic Segmentation based on KITTI</span>,
+			<span id="proceeding">arXiv preprint,</span>
+			<span id="pages"></span>
+			<span id="year">2020.</span>
+			<div id="links"></div>
+		</div>
+		<div id="publication">
+			<span id="author">P. Lottes, J. Behley, N. Chebrolu, A. Milioto, and C. Stachniss</span>
+			<span id="title">Robust joint stem detection and crop-weed classification using image sequences for plant-specific treatment in precision farming</span>,
+			<span id="proceeding">Journal of Field Robotics (JFR),</span>
+			<span id="pages">vol. 37, pp. 20-34,</span>
+			<span id="year">2020.</span>
+			<div id="links"></div>
+		</div>
+		<div id="publication">
+			<span id="author">J. Behley, M. Garbade, A. Milioto, J. Quenzel, S. Behnke, C. Stachniss, and J. Gall</span>
 			<span id="title">SemanticKITTI: A Dataset for Semantic Scene Understanding of LiDAR Sequences</span>,
 			<span id="proceeding">Proc. of the IEEE/CVF International Conference on Computer Vision (ICCV),</span>
 			<span id="year">2019.</span>
-			<div class="abstract" id="behley2019iccv">
-				<b><i>Abstract</i> &mdash; </b>Semantic scene understanding is important for various applications. In
-				particular, self-driving cars need a fine-grained understanding of the surfaces and objects in their vicinity.
-				Light detection and ranging (LiDAR) provides precise geometric information about the environment and is thus a
-				part of the sensor suites of almost all self-driving cars. Despite the relevance of semantic scene understanding
-				for this application, there is a lack of a large dataset for this task which is based on an automotive LiDAR. In
-				this paper, we introduce a large dataset to propel research on laser-based semantic segmentation. We annotated
-				all sequences of the KITTI Vision Odometry Benchmark and provide dense point-wise annotations for the
-				complete 360 degree field-of-view of the employed automotive LiDAR. We propose three benchmark tasks based on
-				this dataset:(i) semantic segmentation of point clouds using a single scan, (ii) semantic segmentation using
-				multiple past scans, and (iii) semantic scene completion, which requires to anticipate the semantic scene in the
-				future. We provide baseline experiments and show that there is a need for more sophisticated models to
-				efficiently tackle these tasks. Our dataset opens the door for the development of more advanced methods, but
-				also provides plentiful data to investigate new research directions. <br> (* indicates equal contribution)
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('behley2019iccv')">abstract</a>
-				<a href="http://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/behley2019iccv.pdf">pdf</a>
-				<a href="http://www.semantic-kitti.org">project page</a></div>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/behley2019iccv.pdf">pdf</a></div>
 		</div>
-
 		<div id="publication">
-			<span id="author">P. Lottes, J. Behley, N. Chebrolu, A. Milioto, and C. Stachniss. </span>
-			<span id="title">Robust joint stem detection and crop‐weed classification using image sequences for plant‐specific
-				treatment in precision farming</span>,
-			<span id="proceeding">Journal of Field Robotics (JFR),</span>
-			<!--span id="pages">vol. 3, pp. 3097-3104,</span-->
+			<span id="author">E. Palazzolo, J. Behley, P. Lottes, P. Gigu\`ere, and C. Stachniss</span>
+			<span id="title">ReFusion: 3D Reconstruction in Dynamic Environments for RGB-D Cameras Exploiting Residuals</span>,
+			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
 			<span id="year">2019.</span>
-			<div class="abstract" id="lottes2019jfr">
-				<b><i>Abstract</i> &mdash; </b>Conventional farming still relies on large quantities of agrochemicals for weed
-				management which have several negative side-effects on the environment. Autonomous robots offer the potential to
-				reduce the amount of chemicals applied, as robots can monitor and treat eachplant in the field individually and
-				thereby circumventing the uniform chemical treatment of the whole field. Such agricultural robots need the
-				ability to identify individual crops
-				and weeds in the field using sensor data and must additionally select effective treatment methods based on the
-				type of weed. For example, certain types of weeds can only be effectively treated mechanically due to their
-				resistance to herbicides, whereas other types can be treated trough selective spraying. In this article, we
-				present a novel system that provides the necessary information for effective plant-specific treatment. It
-				estimates the stem location for weeds, which enables the robots to perform precise mechanical treatment, and at
-				the same time provides the pixel-accurate area covered by weeds for treatment through selective spraying. The
-				major challenge in developing such a system is the large variability in the visual appearance that occurs in
-				different fields. Thus, an effective classification system has to robustly handle substantial environmental
-				changes including varying weed pressure, various weed types, different growth stages, changing visual appearance
-				of the plants and the soil. Our approach uses an end-to-end trainable fully convolutional network that
-				simultaneously estimates plant stem positions as well as the spatial extent of crop plants and weeds. It jointly
-				learns how to detect the stems and the pixel-wise semantic segmentation and incorporates spatial information by
-				considering image sequences of local field strips. The jointly learned feature representation for both tasks
-				furthermore exploits the crop arrangement information that is often present in crop fields. This information is
-				considered even if it is only observable from the image sequences and not a single image. Such image sequences,
-				as typically provided by robots navigating over the field along crop rows, enable our approachto robustly
-				estimate the semantic segmentation and stem positions despite the large variations encountered in different
-				fields. We implemented and thoroughly tested our approachon images from multiple farms in different countries.
-				The experiments show that our system generalizes well to previously unseen fields under varying environmental
-				conditions &mdash; a key capability to deploy such systems in the real world. Compared to state-of-the-art
-				approaches,
-				our approach generalizes well to unseen fields and not only substantially improves the stem detection accuracy,
-				i.e., distinguishing crop and weed stems, but also improves the semantic segmentation performance.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('lottes2019jfr')">abstract</a> <a
-					href="http://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/lottes2019jfr.pdf">pdf</a> </div>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/palazzolo2019iros.pdf">pdf</a><a href="https://github.com/PRBonn/refusion">code</a></div>
 		</div>
-
 		<div id="publication">
-			<span id="author">P. Lottes, J. Behley, A. Milioto, and C. Stachniss. </span>
-			<span id="title">Fully convolutional networks with sequential information for robust crop and weed detection in
-				precision farming</span>,
-			<span id="proceeding">IEEE Robotics and Automation Letters (RA-L),</span>
+			<span id="author">X. Chen, A. Milioto, E. Palazzolo, P. Giguère, J. Behley, and C. Stachniss</span>
+			<span id="title">SuMa++: Efficient LiDAR-based Semantic SLAM</span>,
+			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
+			<span id="year">2019.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/chen2019iros.pdf">pdf</a><a href="https://github.com/PRBonn/semantic_suma/">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">A. Milioto, I. Vizzo, J. Behley, and C. Stachniss</span>
+			<span id="title">RangeNet++: Fast and Accurate LiDAR Semantic Segmentation</span>,
+			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
+			<span id="year">2019.</span>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/milioto2019iros.pdf">pdf</a><a href="https://github.com/PRBonn/lidar-bonnetal">code</a></div>
+		</div>
+		<div id="publication">
+			<span id="author">P. Lottes, J. Behley, A. Milioto, and C. Stachniss</span>
+			<span id="title">Fully Convolutional Networks with Sequential Information for Robust Crop and Weed Detection in Precision Farming</span>,
+			<span id="proceeding">IEEE Robotics & Automation Letters (RA-L),</span>
 			<span id="pages">vol. 3, pp. 3097-3104,</span>
 			<span id="year">2018.</span>
-			<div class="abstract" id="lottes2018ral">
-				<b><i>Abstract</i> &mdash; </b>Reducing the use of agrochemicals is an important component towards sustainable
-				agriculture. Robots that can perform targeted weed control offer the potential to contributeto this goal, for
-				example, through specialized weeding actions such as selective spraying or mechanical weed removal. A
-				prerequisite of such systems is a reliable and robust plant classification system that is able to distinguish
-				crop and weedin the field. A major challenge in this context is the fact that different fields show a large
-				variability. Thus, classification systems have to robustly cope with substantial environmental changes with
-				respect to weed pressure and weed types, growth stages of the crop, visual appearance, and soil conditions. In
-				this paper, we propose a novel crop-weed classification system that relies on a fully convolutional network with
-				an encoder-decoder structure and incorporates spatial information by considering image sequences. Exploiting the
-				crop arrangement information that is observable from the image sequences enables our system to robustly estimate
-				a pixel-wise labeling ofthe images into crop and weed, i.e., a semantic segmentation. We provide a thorough
-				experimental evaluation, which shows that our system generalizes well to previously unseen fields under varying
-				environmental conditions &mdash; a key capability to actually use such systems in precision framing. We
-				provide comparisons to other state-of-the-art approaches and show that our system substantially improves the
-				accuracy of crop-weed classification without requiring a retraining of the model.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('lottes2018ral')">abstract</a> <a
-					href="http://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/lottes2018ral.pdf">pdf</a> </div>
+			<div id="links"><a href="https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/lottes2018ral.pdf">pdf</a></div>
 		</div>
-
 		<div id="publication">
-			<span id="author">P. Lottes, J. Behley, N. Chebrolu, A. Milioto, and C. Stachniss. </span>
-			<span id="title">Joint stem detection and crop-weed classification for plant-specific treatment in precision
-				farming</span>,
-			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems
-				(IROS),</span>
+			<span id="author">P. Lottes, J. Behley, N. Chebrolu, A. Milioto, and C. Stachniss</span>
+			<span id="title">Joint Stem Detection and Crop-Weed Classification for Plant-specific Treatment in Precision Farming</span>,
+			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
 			<span id="year">2018.</span>
-			<div class="abstract" id="lottes2018iros">
-				<b><i>Abstract</i> &mdash; </b>Applying agrochemicals is the default procedure for conventional weed control in
-				crop production, but hasnegative impacts on the environment. Robots have the potentialto treat every plant in
-				the field individually and thus canreduce the required use of such chemicals. To achieve that, robots need the
-				ability to identify crops and weeds in the fieldand must additionally select effective treatments. While
-				certaintypes of weed can be treated mechanically, other types need to be treated by (selective) spraying. In
-				this
-				paper, we present an approach that provides the necessary information for effective plant-specific treatment. It
-				outputs the stem location for weeds, which allows for mechanical treatments, and the covered areaof the weed for
-				selective spraying. Our approach uses an end-to-end trainable fully convolutional network that
-				simultaneouslyestimates stem positions as well as the covered area of cropsand weeds. It jointly learns the
-				class-wise stem detection andthe pixel-wise semantic segmentation. Experimental evaluationson different
-				real-world datasets show that our approach isable to reliably solve this problem. Compared to state-of-the-art
-				approaches, our approach not only substantially improves the stem detection accuracy, i.e., distinguishing crop
-				and weed stems, but also provides an improvement in the semantic segmentation performance.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('lottes2018iros')">abstract</a> <a
-					href="http://www.ipb.uni-bonn.de/pdfs/lottes18iros.pdf">pdf</a> </div>
+			<div id="links"></div>
 		</div>
-
 		<div id="publication">
-			<span id="author">J. Behley, C. Stachnis. </span>
+			<span id="author">J. Behley, and C. Stachniss</span>
 			<span id="title">Efficient Surfel-Based SLAM using 3D Laser Range Data in Urban Environments</span>,
 			<span id="proceeding">Proc. of Robotics: Science and Systems (RSS),</span>
-			<!--span id="pages">pp. 4195&ndash;4200,</span-->
 			<span id="year">2018.</span>
-			<div class="abstract" id="behley2018rss">
-				<b><i>Abstract</i> &mdash; </b>Accurate and reliable localization and mapping is a fundamental building block
-				for most autonomous robots. For this purpose, we propose a novel, dense approach to laser-based mapping that
-				operates on three-dimensional point clouds obtained from rotating laser sensors. We construct a surfel-based map
-				and estimate the changes in the robot's pose by exploiting the projective data association between the current
-				scan and a rendered model view from that surfel map. For detection and verification of a loop closure, we
-				leverage the map representation to compose a virtual view of the map before a potential loop closure, which
-				enables a more robust detection even with low overlap between the scan and the already mapped areas. Our
-				approach is efficient and enables real-time capable registration. At the same time, it is able to detect loop
-				closures and to perform map updates in an online fashion. Our experiments show that we are able to estimate
-				globally consistent maps in large scale environments solely based on point cloud data.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('behley2018rss')">abstract</a> <a
-					href="papers/behley2018rss.pdf">pdf</a> <a href="projects/surfel_mapping/index.html">project page</a>
-				<a href="https://github.com/jbehley/SuMa">code</a></div>
+			<div id="links"></div>
 		</div>
 		<div id="publication">
-			<span id="author">J. Behley, V. Steinhage, A.B. Cremers. </span>
+			<span id="author">J. Behley, V. Steinhage, and A.B. Cremers</span>
 			<span id="title">Efficient Radius Neighbor Search in Three-dimensional Point Clouds</span>,
 			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
-			<!--span id="pages">pp. 4195&ndash;4200,</span-->
 			<span id="year">2015.</span>
-			<div class="abstract" id="behley2015icra">
-				<b><i>Abstract</i> &mdash; </b>Finding all neighbors of a point inside a given radius is an integral part in
-				many approaches using three-dimensional laser range data.
-				We present novel insights to significantly improve the runtime performance of radius neighbor search using
-				octrees. Our contributions are as follows:
-				(1) We propose an index-based organization of the point cloud such that we can efficiently store start and end
-				indexes of points inside every octant and
-				(2) exploiting this representation, we can use pruning of irrelevant subtrees in the traversal to facilitate
-				highly efficient radius neighbor search.
-				We show significant runtime improvements of our proposed octree representation over state-of-the-art neighbor
-				search implementations on three different urban datasets.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('behley2015icra')">abstract</a> <a
-					href="papers/behley2015icra.pdf">pdf</a> <a href="octree/index.html">code</a> <a
-					href="data/index.html">data</a></div>
+			<div id="links"></div>
 		</div>
 		<div id="publication">
-			<span id="author">J. Behley. </span>
-			<span id="title">Three-dimensional Laser-based Classification in Outdoor Environments</span>,
-			<span id="proceeding">Dissertation, Rheinische Friedrich-Wilhelms-Universit&auml;t Bonn,</span>
-			<!--span id="pages">pp. 4195&ndash;4200,</span-->
-			<span id="year">2014.</span>
-			<div class="abstract" id="behley2014phd">
-				<b><i>Abstract</i> &mdash; </b>Robotics research strives for deploying autonomous systems in populated
-				environments, such as inner city traffic.
-				Autonomous cars need a reliable collision avoidance, but also an object recognition to distinguish different
-				classes of traffic participants.
-				For both tasks, fast three-dimensional laser range sensors generating multiple accurate laser range scans per
-				second, each consisting of a vast number of laser points, are often employed.
-				In this thesis, we investigate and develop classification algorithms that allow us to automatically assign
-				semantic labels to laser scans.
-				We mainly face two challenges: (1) we have to ensure consistent and correct classification results and (2) we
-				must efficiently process a vast number of laser points per scan. In consideration of these challenges, we cover
-				both stages of classification -- the feature extraction from laser range scans and the classification model that
-				maps from the features to semantic labels.
-				<br />
-				As for the feature extraction, we contribute by thoroughly evaluating important state-of-the-art histogram
-				descriptors.
-				We investigate critical parameters of the descriptors and experimentally show for the first time that the
-				classification performance can be significantly improved using a large support radius and a global reference
-				frame.
-				<br />
-				As for learning the classification model, we contribute with new algorithms that improve the classification
-				efficiency and accuracy.
-				Our first approach aims at deriving a consistent point-wise interpretation of the whole laser range scan.
-				By combining efficient similarity-preserving hashing and multiple linear classifiers, we considerably improve
-				the consistency of label assignments, requiring only minimal computational overhead compared to a single linear
-				classifier.
-				<br />
-				In the last part of the thesis, we aim at classifying objects represented by segments.
-				We propose a novel hierarchical segmentation approach comprising multiple stages and a novel mixture
-				classification model of multiple bag-of-words vocabularies.
-				We demonstrate superior performance of both approaches compared to their single component counterparts using
-				challenging real world datasets.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('behley2014phd')">abstract</a> <a
-					href="http://hss.ulb.uni-bonn.de/2014/3504/3504.htm">ULB Bonn</a> <a
-					href="http://hss.ulb.uni-bonn.de/2014/3504/3504.pdf">pdf</a></div>
-		</div>
-		<div id="publication">
-			<span id="author">J. Behley, V. Steinhage, A.B. Cremers. </span>
+			<span id="author">J. Behley, V. Steinhage, and A.B. Cremers</span>
 			<span id="title">Laser-based Segment Classification Using a Mixture of Bag-of-Words</span>,
-			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems
-				(IROS),</span>
-			<span id="pages">pp. 4195&ndash;4200,</span>
+			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
 			<span id="year">2013.</span>
-			<div class="abstract" id="behley2013iros">
-				<b><i>Abstract</i> &mdash; </b>In this paper, we propose a segment-based object detection approach using laser
-				range data.
-				Our detection approach is built up of three stages:
-				First, a hierarchical segmentation approach generates a hierarchy of coarse-to-fine segments to reduce the
-				impact of over- and under-segmentation in later stages.
-				Next, we employ a learned mixture model to classify all segments.
-				The model combines multiple softmax regression classifiers learned on specific bag-of-word representations using
-				different parameterizations of a descriptor.
-				In the final stage, we filter irrelevant and duplicate detections using a greedy method in consideration of the
-				segment hierarchy.
-				We experimentally evaluate our approach on recently published real-world datasets to detect pedestrians, cars,
-				and cyclists.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('behley2013iros')">abstract</a> <a
-					href="papers/behley2013iros.pdf">pdf</a><a href="data/index.html">data</a></div>
+			<div id="links"></div>
 		</div>
 		<div id="publication">
-			<span id="author">V. Steinhage, J. Behley, S. Meisel, A.B. Cremers. </span>
+			<span id="author">V. Steinhage, J. Behley, S. Meisel, and A.B. Cremers</span>
 			<span id="title">Reconstruction by components for automated updating of 3D city models</span>,
-			<span id="proceeding">Applied Geomatics,</span>
-			<span id="pages"></span>
-			<!--pp. 4391&ndash;4398</span>,-->
-			<span id="year">Springer, 2013.</span>
-			<div class="abstract" id="steinhage2013ag">
-				<b><i>Abstract</i> &mdash; </b>3D city models are of interest for various reasons like urban planning,
-				environmental simulations of urban climate and noise pollution, disaster simulations, virtual tourism,
-				virtual-heritage conservation, etc.
-				To create and update large-scale 3D city models efficiently, automated approaches to 3D reconstruction are in
-				great demand.
-				Aside from efficiency, reliability and flexibility are of crucial importance.
-				The derived reconstruction results should be reliable in that they correspond to the observed buildings in both
-				their geometry and their structural topology.
-				Flexibility should ensure the derivation of 3D reconstructions for the most common urban building structures
-				without being limited in descriptive power to only some specific building types.
-				To ensure efficiency, reliability, and flexibility of automated 3D building reconstruction, we propose an
-				approach that combines two paradigms.
-				First, we employ the fusion of information derived from different sensors and map data from a geographic
-				information system.
-				Second, we employ a semantic and component-based approach to model and reconstruct complex buildings.
-				The derived geometrical and semantic building description is utilized within a spatial information system to
-				support spatial and semantic queries for the maintenance and updating of the derived 3D city models.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('steinhage2013ag')">abstract</a> <a
-					href="http://link.springer.com/article/10.1007/s12518-013-0117-5">link</a> </div>
+			<span id="proceeding">Applied Geomatrics,</span>
+			<span id="pages">vol. 5, pp. 285-298,</span>
+			<span id="year">2013.</span>
+			<div id="links"></div>
 		</div>
 		<div id="publication">
-			<span id="author">J. Behley, V. Steinhage, A.B. Cremers. </span>
-			<span id="title">Performance of Histogram Descriptors for the Classification of 3D Laser Range Data in Urban
-				Environments</span>,
+			<span id="author">J. Behley, V. Steinhage, and A.B. Cremers</span>
+			<span id="title">Performance of Histogram Descriptors for the Classification of 3D Laser Range Data in Urban Environments</span>,
 			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
-			<span id="pages">pp. 4391&ndash;4398</span>,
 			<span id="year">2012.</span>
-			<div class="abstract" id="behley2012icra">
-				<b><i>Abstract</i> &mdash; </b> The selection of suitable features and their parameters for the classification
-				of three-dimensional laser range data is a crucial issue for high-quality results.
-				In this paper we compare the performance of different histogram descriptors and their parameters on three urban
-				datasets recorded with various sensors &mdash; sweeping SICK lasers, tilting SICK lasers and a Velodyne 3D laser
-				range scanner.
-				These descriptors are 1D, 2D, and 3D histograms capturing the distribution of normals or points around a query
-				point.
-				We also propose a novel histogram descriptor, which relies on the spectral values in different scales.
-				We argue that choosing a larger support radius and a z-axis based global reference frame/axis can boost the
-				performance of all kinds of investigated classification models significantly.
-				The 3D histograms relying on the point distribution, normal orientations, or spectral values, turned out to be
-				the best choice for the classification in urban environments.
-			</div>
-			<div class="abstract" id="behley2012-errata">
-				<i>Errata</i> &mdash; In section 2 there were two errors in the histogram index derivation.
-				(1) The spin image index j must be calculated as floor(1/rho 0.5 (delta + beta)).
-				(2) The distribution histogram must be calculated as floor(b/2 (q'/delta + 1)).
-				In the linked version (draft), these errors are corrected.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('behley2012icra')">abstract</a> <a
-					href="papers/behley2012icra.pdf">pdf</a> <a href="javascript:toggleAbstract('behley2012-errata')">errata</a><a
-					href="data/index.html">data</a></div>
+			<div id="links"></div>
 		</div>
 		<div id="publication">
-			<span id="author">F. Sch&ouml;ler, J. Behley, V. Steinhage, D. Schulz, A.B. Cremers. </span>
+			<span id="author">F. Schöler, J. Behley, V. Steinhage, D. Schulz, and A.B. Cremers</span>
 			<span id="title">Person Tracking in Three-Dimensional Laser Range Data with Explicit Occlusion Adaption</span>,
 			<span id="proceeding">Proc. of the IEEE International Conference on Robotics and Automation (ICRA),</span>
-			<span id="pages">pp. 1297&ndash;1303</span>,
 			<span id="year">2011.</span>
-			<div class="abstract" id="schoeler2011icra">
-				<b><i>Abstract</i> &mdash; </b> This paper presents an approach to exploit the richer information of sensor data
-				provided by 3d laser rangefinders for the purpose of person tracking.
-				Introduced is a method to adapt the observation model of a particle filter, to identify partial and full
-				occlusions of a person, to determine the amount of occlusion behind an obstacle, and the occluding obstacle
-				itself.
-				This is done by tracing rays from positions near the person to the sensor and determining whether the ray hits
-				an obstacle.
-				The laser range data is represented using a voxel grid, which facilitates efficient retrieval and data
-				reduction.
-				As our experiments show, our proposed tracking approach is able to reliably keep track of a person in real-time,
-				even when only partially visible, when moving in uneven terrain, or when the person passes closely another
-				person of different size.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('schoeler2011icra')">abstract</a> <a
-					href="papers/schoeler2011icra.pdf">pdf</a></div>
+			<div id="links"></div>
 		</div>
 		<div id="publication">
-			<span id="author">J. Behley, K. Kersting, D. Schulz, V. Steinhage, A.B. Cremers. </span>
+			<span id="author">J. Behley, K. Kersting, D. Schulz, V. Steinhage, and A.B. Cremers</span>
 			<span id="title">Learning to Hash Logistic Regression for Fast 3D Scan Point Classification</span>,
-			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems
-				(IROS),</span>
-			<span id="pages">pp. 5960&ndash;5965</span>,
+			<span id="proceeding">Proc. of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),</span>
 			<span id="year">2010.</span>
-			<div class="abstract" id="behley2010iros">
-				<b><i>Abstract</i> &mdash; </b> Segmenting range data into semantic categories has become a more and more active
-				field of research in robotics.
-				In this paper, we advocate to view this task as a problem of fast, large-scale retrieval.
-				Intuitively, given a dataset of millions of labeled scan points and their neighborhoods, we simply search for
-				similar points in the datasets and use the labels of the retrieved ones to predict the labels of a novel point
-				using some local prediction model such as majority vote or logistic regression.
-				However, actually carrying this out requires highly efficient ways of (1) storing millions of scan points in
-				memory and (2) quickly finding similar scan points to a target scan point.
-				In this paper, we propose to address both issues by employing Weiss et al.'s recent spectral hashing.
-				It represents each item in a database by a compact binary code that is constructed so that similar items will
-				have similar binary code words.
-				In turn, similar neighbors have codes within a small Hamming distance of the code for the query.
-				Then, we learn a logistic regression model locally over all points with the same binary code word.
-				Our experiments on real world 3D scans show that the resulting approach, called spectrally hashed logistic
-				regression, can be ultra fast at prediction time and outperforms state-of-the art approaches such as logistic
-				regression and nearest neighbor.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('behley2010iros')">abstract</a> <a
-					href="papers/behley2010iros.pdf">pdf</a></div>
+			<div id="links"></div>
 		</div>
 		<div id="publication">
-			<span id="author">V. Steinhage, J. Behley, S. Meisel, A. B. Cremers. </span>
-			<span id="title">Automated Updating and Maintenance of 3D City Models</span>,
-			<span id="proceeding">ISPRS-Workshop on Core Spatial Databases - Updating, Maintenance and Services,</span>
-			<span id="pages"></span>
+			<span id="author">V. Steinhage, J. Behley, S. Meisel, and A. B. Cremers</span>
+			<span id="title">Learning to Hash Logistic Regression for Fast 3D Scan Point Classification</span>,
+			<span id="proceeding">Proc. of the ISPRS-Workshop on Core Spatial Databases - Updating, Maintenance and Services,</span>
 			<span id="year">2010.</span>
-			<div class="abstract" id="steinhage2010isprs-ws">
-				<b><i>Abstract</i> &mdash; </b> The automation of 3D building reconstruction is an ongoing topic of worldwide
-				research.
-				Currently, cities all over the world are heavily engaged to create 3D city models for various reasons like town
-				planning, urban climate and noise simulations, virtual tourism etc.
-				Generally, companies are entrusted to generate such 3D city models.
-				The current approaches of those companies are labour intensive and therefore cost intensive, since the
-				reconstruction of each single building is based mainly on manual processing within a computer supported editing
-				framework.
-				The same holds for internet providers of 3D city models which offer tools for the interactive construction of 3D
-				models (e.g. the SketchUp tool of Google Earth).
-				In cooperation with the land registry and surveying office of the city of Bonn we developed an automated
-				approach to 3D building reconstruction as well as a spatial information system for the maintenance of 3D city
-				models.
-				This contribution focuses on our approach on 3D building reconstruction which employs a model-based data fusion
-				from aerial images, airborne laser scanning and GIS.
-				Furthermore, we describe our spatial information system to maintain the 3D city models.
-				The spatial information system is based on open source RDBMS and offers SQL-based spatial query functionality.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('steinhage2010isprs-ws')">abstract</a> <a
-					href="papers/steinhage2010isprs-ws.pdf">pdf</a></div>
+			<div id="links"></div>
 		</div>
 		<div id="publication">
-			<span id="author">J. Behley, V. Steinhage. </span>
+			<span id="author">J. Behley, and V. Steinhage</span>
 			<span id="title">Generation of 3D City Models Using Domain-Specific Information Fusion</span>,
-			<span id="proceeding">Proc. of the International Conference on Computer Vision Systems (ICVS),</span>
-			<span id="pages">pp. 164&ndash;173</span>,
+			<span id="proceeding">Proc. of the International Conference on Computer Vision Systems (icvs),</span>
 			<span id="year">2009.</span>
-			<div class="abstract" id="behley2009icvs">
-				<b><i>Abstract</i> &mdash; </b> In this contribution we present a building reconstruction strategy using spatial
-				models of building parts and information fusion of aerial image, digital surface model and ground plans.
-				The fusion of sensor data aims to derive reliably local building features and is therefore controlled in a
-				domain specific way:
-				ground plans indicate the approximate location of outer roof corners and the intersection of planes from the
-				digital surface model yields the inner roof corners.
-				Parameterized building parts are selected using these corners and afterwards combined to form complete
-				three-dimensional building models.
-				We focus here on the domain specific information fusion and present results on a sub-urban dataset.
-			</div>
-			<div id="links"><a href="javascript:toggleAbstract('behley2009icvs')">abstract</a> <a
-					href="papers/behley2009icvs.pdf">pdf</a></div>
+			<div id="links"></div>
 		</div>
 		<div id="publication">
 			<span id="author">V. Steinhage, J. Behley. </span>
@@ -517,6 +612,33 @@
 
 	<div id="teaching">
 		<h1>teaching</h1>
+		<div id="course">
+			<span id="term">Summer Term 23: </span>
+			<span id="name">"Machine Learning for Robotics and Computer Vision" (Master)</span>
+		</div>
+		<div id="course">
+			<span id="term">Winter Term 22/23: </span>
+			<span id="name">"Techniques for Self-Driving Cars" (Master) with Prof. Dr. Cyrill Stachniss and Benedikt
+				Mersch</span>
+		</div>
+		<div id="course">
+			<span id="term">Summer Term 22: </span>
+			<span id="name">"Machine Learning for Robotics and Computer Vision" (Master)</span>
+		</div>
+		<div id="course">
+			<span id="term">Winter Term 21/22: </span>
+			<span id="name">"Techniques for Self-Driving Cars" (Master) with Prof. Dr. Cyrill Stachniss, Lasse Peters, and
+				Benedikt Mersch</span>
+		</div>
+		<div id="course">
+			<span id="term">Summer Term 21: </span>
+			<span id="name">"Machine Learning for Robotics and Computer Vision" (Master)</span>
+		</div>
+		<div id="course">
+			<span id="term">Winter Term 20/21: </span>
+			<span id="name">"Techniques for Self-Driving Cars" (Master) with Prof. Dr. Cyrill Stachniss, Nived Chebrolu, and
+				Benedikt Mersch</span>
+		</div>
 		<div id="course">
 			<span id="term">Summer Term 15: </span>
 			<span id="name">"Knowledge-based Image Understanding" (Master) together with PD Dr. Volker Steinhage and Dominik
