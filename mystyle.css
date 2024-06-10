@@ -5,7 +5,7 @@ article,aside,figure,footer,header,hgroup,nav,section{display:block}
 body
 {
 	margin: 1em auto;
-	width: 50em;
+	width: 75em;
 }
 
 div.border-element {
@@ -52,7 +52,7 @@ div#office,#phone,#email
 {
 		 padding: 4px;
 		 position: relative;
-		 left:115px;
+		 left:10px;
 }
 
 div#links
@@ -84,9 +84,22 @@ img#email {
 }
 
 div#photo {
-		 padding:5px;
-		 float: left;
+	padding:15px;
+	float: left;
+	width: 230px;
+	height: 230px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 30%;
 }
+
+
+div#photo img {
+	display: inline;
+	margin: 0 auto;
+	height: 100%;
+	width: auto;
+  }
 
 div#publication
 {
