@@ -84,13 +84,13 @@ img#email {
 }
 
 div#photo {
-	padding:15px;
+	padding: 7px;
 	float: left;
-	width: 230px;
-	height: 230px;
+	width: 224px;
+	height: 224px;
 	position: relative;
 	overflow: hidden;
-	border-radius: 30%;
+	border-radius: 16%;
 }
 
 
