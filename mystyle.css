@@ -168,9 +168,13 @@ div#classes
 	margin:5px;
 }
 
+div#links {
+	padding:5px;
+	display: inline;
+}
+
 div#links a:hover#scans,a:link#scans,a:hover#labels,a:link#labels
 {
-	padding:5px;
 	font-size:11pt;
 	font-weight:bold;
 	text-decoration:none;
